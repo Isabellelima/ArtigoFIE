@@ -379,7 +379,8 @@ Fax: (888) 555--1212}}
 % As a general rule, do not put math, special symbols or citations
 % in the abstract
 \begin{abstract}
-The abstract goes here.
+
+Educational Robotics (ER) has revealed several benefits in the educational context, not only helping the teaching of disciplines, but also making possible the development of several abilities, such as teamwork, problem-solving, and creativity. Among various robotics kits, LEGO Robotics has been shown one of the best results considering some evaluated criteria (modularity level, hardware, curriculum, price, etc.). Some studies analyze the teaching practices, some compare technologies, and others evaluate the kits in a pedagogical way. However, it is essential to investigate all these contexts together in order to improve the impact produced by the ER in education and to know the best teaching practices associated with the most powerful technologies. The objective of this work is to identify: a) environments and programming languages adopted in the LEGO Robotics context, b) educational practices applied during classes based on LEGO Robotics, and c) the educational levels in which robotics has been applied with positive results. To achieve these goals, we planned and carried out a systematic review of the literature. Our main findings are: a) the most widely used environment and programming language are LabVIEW along with the LEGO's block-based programming language, b) we identified LEGO Robotics is used for teaching programming, interdisciplinary contents, participation in tournaments, robotics, and computational thinking, c) LEGO Robotics is used with success by students of different levels, such as K-12, undergraduate, and graduated. Finally, we discuss some problems and limitations related to ER and point out that there is no standardization of teaching practices or methodologies for evaluating results, indicating that more research is needed to find the best scenario regarding technologies, methods, and target audience.
 \end{abstract}
 
 % no keywords
@@ -400,25 +401,171 @@ The abstract goes here.
 
 
 \section{Introduction}
-% no \IEEEPARstart
-This demo file is intended to serve as a ``starter file''
-for IEEE conference papers produced under \LaTeX\ using
-IEEEtran.cls version 1.8b and later.
-% You must have at least 2 lines in the paragraph with the drop letter
-% (should never be an issue)
-I wish you the best of success.
 
-\hfill mds
+Educational Robotics (ER) can be an educational tool indicated for teaching Science, Technology, Engineering and Mathematics (STEM) and Computer Science in all levels of education \cite{Rogers2}. Seymour Papert has pioneered the use of computer and robot as a way of learning. He believed on learning by making, where students were encouraged to discover and build knowledge through practice activities \cite{PAPERT}. Besides, several studies have demonstrated that ER is an approach to stimulate the development of varied skills, such as teamwork, logical reasoning, critical thinking and creativity \cite{Miller} \cite{Blanchard}. ER is multidisciplinary approach involving design, assembly and use of robots applying principles of engineering, computing, mathematics, physics, among other sciences.
+
+The educational benefits of ER are provided by robotics kits and software in order to facilitate the programming of constructed robots. Currently, there are several robotics kits available for use, not only open source, such as Arduino but also commercials, such as LEGO Mindstorms and Fischertechnik. LEGO Mindstorms is widely accepted in schools around the world. According to Eigner et al., "LEGO Mindstorms is probably the most popular modular robotics kit, building on the famous bricks and with a wide range of applications" \cite{Eigner}. 
+
+LEGO Mindstorms NXT or EV3 promotes education both with its physical part, while built blocks, and in the LabView visual programming environment, while programming the robots. According to Chambers et al. \cite{Chambers}, activities based on building blocks have helped students to understand the concepts of gears and a vehicle’s speed. The LabView visual programming environment provides programming learning in a fun and straightforward way, jointly stimulates the development of Computational Thinking \cite{Bers}.
+
+Several research have analyzed the technological and pedagogical potential that robotics can offer for education. Kunduracıoğlu investigated how to use LabView with LEGO Mindstorms EV3 \cite{Kunduracıoglu}. Hirst et al. examined the programming environments for LEGO Mindstorms available until 2003 \cite{Hirst}. The research aimed to assist in choosing the environment for teaching LEGO Robotics. Eigner et al. investigated the development of communities that use robotics kits for educational purpose \cite{Eigner}. They pointed out that LEGO Robotics is one of the most popular and has the best support for education.
+
+Although previous research have analyzed the pedagogical potential of robotics, there is still very little understanding of the impacts and contributions that ER offer, considering hardware, software, and educational practices in the same context. The existing studies focus on specific criteria and commonly ignore the applied teaching methodology during activities. This fact may interfere with the analysis as a whole. As far as we know, there is no systematic review of literature that analyzed the use of LEGO Robotics technology as an instrument for teaching, encompassing the analysis of the robotics kits combine its programming environments with teaching methodologies and practices at the same time.
+
+In this context, it is necessary to know the best teaching practices associated with the most powerful technologies. The objective of this work is to identify: a) environments and programming languages adopted in the LEGO Robotics context; b) educational practices applied during classes based on LEGO Robotics; c) the educational levels in which robotics has been applied with positive results. To achieve these goals, we planned and carried out a systematic review of the literature (SRL) following the guidelines proposed by Kitchenham et al. \cite{Kitchenham} and Petersen et al. \cite{Petersen}. 
+
+This paper is organized as follows. Section 2 presents the related works. Section 3 describes the process of SRL. Section 4 shows the results answering the research questions. Section 5 discusses the primary information observed during the SRL. Finally, Section 6 presents the conclusion.
+
+%\hfill 
+
+\section{Related Work}
+R can promote students’ interest in education and scientific careers \cite{Bers}, \cite{Ospennikova}, \cite{Rogers} \cite{Lupetti}. These previous studies present discussions about teaching practices such as interdisciplinary teaching, teaching programming, and development of Computational Thinking.
+
+Several studies argue over ER has remarkable education potential, but they only worry about the technological artifacts which support educational actions. Eigner et al. evaluated various robotics kit considering some criteria, such as quality of educational materials, development and extension possibilities, target audience, and modularity level \cite{Eigner}. All mentioned criteria are focused on educational resources in several robotics kits. Hirts et al. compared the programming environments for LEGO Mindstorms available until 2013 in order to assist in choosing the programming environment for teaching \cite{Hirst}. Kunduracıoglu aimed at providing detailed information on how to use LabView with LEGO Mindstorms EV3 \cite{Kunduracıoglu}.
+
+To the best of our knowledge, there are no literature reviews focused on surveying the development environments for teaching with LEGO Robotics that contemplate pedagogical issues involved in the teaching process. Bers et al. \cite{Bers}, Ospennikova et al. \cite{Ospennikova}, Rogers et al. \cite{Rogers}, and Lupetti et al. \cite{Lupetti} are focused on applied teaching practices, while Eiger et al. \cite{Eigner} analyzed amount robotics kit. Besides, Eiger et al. used the popularity and availability of the manufacturers’ official materials as criteria to select the robotics kit for evaluation, without following a systematic cataloging process. In turn, Hist et al. compared the development environments for LEGO, but without obeying systematic process in 2003 \cite{Hirst}.
+
+In the SRL, Cheng et al. present an investigation of the characteristics of ER in six different target groups (Preschool, Elementary, High School, Higher Education, Adults and Elderly) \cite{Cheng}. However, they did not evaluate considering the technological artifacts and pedagogical practices. Both aspects are essential to measure the effectiveness of learning through ER, especially if they are taken together in the same context. However, as far as we know, there is no RSL focused on technological artifacts and pedagogical practices in LEGO Robotics.
+
+
+\section{Methodology}
+
+This Section presents the methodology used in our SRL. We planned and executed a SRL following the guidelines proposed by Kitchenham et al. \cite{Kitchenham} and Petersen et al. \cite{Petersen}. This SRL methodology has been gaining attention in the Software Engineering community, because it follows a rigorous and auditable protocol allowing to  evaluate available studies relevant to a particular topic area and answer research questions. In addition, it enables the identification of gaps in current research, thereby opening possibilities for future work \cite{Kitchenham}.
+
+The protocol was developed as proposed by \cite{Kitchenham}. The guideline was followed intent to guide the execution of the research plus reduce the possibility researcher bias. The detailed procedures are in the following subsections.
+
+\subsection{Research Questions}
+
+The research questions proposed in this SRL aim to gather information about programming environments and educational practices in  LEGO Robotics classes. The research questions (RQ) are: 
+
+\textbf{RQ1:} What environments and programming languages have been used for teaching through LEGO Robotics? 
+The objective of RQ1 is to identify environments and programming languages adopted in the LEGO Robotics context. 
+
+\textbf{RQ2:} What has been taught using LEGO Robotics? 
+ 	The objective of RQ2 is to classify educational practices applied during classes based on LEGO Robotics. 
+
+\textbf{RQ3:} What has been the target audience for the use of LEGO Robotics?
+The objective of RQ3 is identify the educational levels in which robotics has been applied with positive results. 
+
+\subsection{Conduct Search}
+
+Planning is an imperative activity for a consistent SRL. After the definition of RQ,  the search string was constructed in the direction of supporting the search of the studies in the digital libraries. For this, we followed the guideline defined in the protocol:
+
+\begin{itemize}
+
+\item Identifying the main keywords of the research questions;
+\item Identifying related words and synonyms for keywords;
+\item Performing tests in the databases and checking the quality of the results. If necessary, remake the related words and synonyms for the keywords;
+\item In the search string, use the keywords, related words, and synonyms that returned the number of studies aligned with the search questions; 
+\item Using OR Boolean to connect synonyms/related words and AND Boolean to connect keywords;
+\item Performing tests to evaluate the quality of the results. If necessary, remake the search string to obtain better results.
+
+\end{itemize}
+
+The main keywords were identified according to the research questions and the objective of the present study. The main keywords were Environments, LEGO and Robotics. The related words and synonyms for the keywords are shown in Table \ref{synonyms_keywords}.
+
+\begin{table}[h]
+\renewcommand{\arraystretch}{1.3}
+\caption{Synonyms for the keywords}
+\label{synonyms_keywords}
+\centering
+\begin{tabular}{|c||p{5cm}|}
+\hline \textbf{Key words} &\textbf{Synonyms or related words}\\
+\hline Environment & software OR programming OR environment OR package\\
+\hline LEGO & mindstorms\\
+\hline Robotic & -\\
+\hline
+\end{tabular}
+\end{table}
+
+After following the above-mentioned guideline, the search string was defined as:
  
-\hfill August 26, 2015
+\begin{center} 
+\textbf{( (software OR programming OR environment OR package) AND (lego OR mindstorms)  AND robotic )}
+\end{center}
 
-\subsection{Subsection Heading Here}
-Subsection text here.
+After defining the search string, the next step was carried out the search in the ACM, IEEEXplore, ScienceDirect (Elsevier), and Scopus digital libraries. These libraries were chosen because they presented better results during the pilot test, besides they have been centralized the most publications related to Computer Science and Education. Table \ref{summary_library} shows the quantity of the studies returned in each digital library.
 
 
-\subsubsection{Subsubsection Heading Here}
-Subsubsection text here.
+\begin{table}[h]
+\renewcommand{\arraystretch}{1.3}
+\caption{Summary of the studies returned in each digital library}
+\label{summary_library}
+\centering
+\begin{tabular}{|c||c|}
+\hline \textbf{Digital Library} &\textbf{Search Results}\\
+\hline ACM	 & 36\\
+\hline IEEE & 79\\
+\hline ScienceDirect & 224\\
+\hline Scopus & 1024\\
+\hline \textbf{Total} & \textbf{1363}\\
+\hline
+\end{tabular}
+\end{table}
 
+\subsection{Screening of papers for inclusion and exclusion}
+
+The selection of the studies considered inclusion and exclusion criteria. The inclusion criteria were:
+\begin{itemize}
+\item Studies whose address the use of LEGO Robotics in teaching;
+\item Studies accessible electronically.
+\end{itemize}
+
+The exclusion criteria were:
+\begin{itemize}
+\item Studies whose are outside the field of research;
+\item Studies that explore LEGO Robotics for teaching any subject, but it does not present evaluation, assessment, or validation;
+\item Studies that use LEGO Robotics for teaching any subject, but it does not contemplate robot programming;
+\item Non-peer reviewed studies, such as abstracts only, tutorials, editorials, slides, lectures, posters, panels, keynotes, and technical reports;
+\item Peer-reviewed studies, but it was not published in journals, conferences, or workshops, such as doctoral thesis, books, and patents;
+\item Studies whose language was not English; 
+\item Studies published before 2013;
+\item Studies electronically not accessible.
+\item Duplicated and secondary studies.
+\end{itemize}
+
+Initially, we excluded duplicated and secondary studies. Then, the selection process was performed in two steps. In the first step, we read the titles and abstracts. The studies related to the mechatronics’ industry, using or not LEGO Robotics, were excluded. So, we selected 315 studies that may help to answer the research questions. In the second step, the introduction, methodology and conclusion sections of the selected studies in the first step were read. Studies which involved the development of LEGO Robotics laboratories were withdrawn. In this phase, 36 studies fit the context of the research with information capable of answering the research questions. These studies were read and carefully analyzed in order to extract as much information as necessary.
+
+\section{Results}
+
+This section details the results in our RSL. The research was conducted from October 2017 to April 2018. Initially, we will present the general results, including the distribution of publications by years, countries were the research has been done, types of publication vehicles and types of scientific research applied in the studies. Finally, the remaining sections answer each research question.
+
+\subsection{General Results}
+\begin{enumerate}
+\item Publication year:FIGURE X presents the absolute number of studies by year of publication. The selected studies focus mainly on the years 2016 and 2015, both with 25\% publication each one. The years  2017, 2014 and 2013 presented a distribution of 16.7\%, 22\%, and 11.11\%, respectively. These numbers have been shown the interest of the scientific community with LEGO Robotics as an instrument for teaching since 2014. 
+\item  Countries distribution: The result shows the United States of America was the country with the most significant number of research involving LEGO Robotics with 11 studies, following by Germany with four studies. South Africa, Brazil, and Spain published three studies each one, while the United Kingdom, Italy, and Cyprus published two studies each one. Canada, Chile, Slovenia, Georgia, Greece, India, Japan, Puerto Rico, Portugal, and Saudi Arabia have only one published study each one. The fact that the United States of America leads the research may be related to the country's investment in Computer Education since the first years of school. As robotics is one of the tools used to teach computational concepts, LEGO Robotics stands out in schools motivating research involving technology. Figure X shows the countries distribution where research has been done. Here, the number of studies is more than the total selected studies, because the same study could be carried out by authors from different countries. 
+\item Publication vehicles: The studies were published in Conference (twenty-six studies), Symposium (five studies), Journal (four studies), and Workshop (one studies).
+\item Types of studies:  The studies were also classified by the adopted method. Most of the selected studies presented the experiences with LEGO Robotics in teaching some subject. Few studies showed validation, but those who did, it was a comparative case study. The types of studies found in the selected papers were case study (twenty studies), experience report (fifteen studies), and experimental study (one study). We highlight the descriptive and comparative case studies were classified only as a case study. Figure X summarizes the types of studies. 
+\end{enumerate}
+
+\subsection{RQ1: What environments and programming languages have been used for teaching through LEGO Robotics?}
+
+According to the selected studies, the programming environment most used for teaching though LEGO Robotics is LabVIEW (twenty-eight studies), considering the LEGO Mindstorm NXT, EV3 or both. The NXT version (NXT-G) was used by nineteen studies, whereas the EVX by seven studies, but two studies used both versions. LabVIEW is a development environment design for LEGO Mindstorm Education products that allows students and teachers programming robots through block-based language specific to LEGO robotics.
+
+The Eclipse environment was cited by two studies, while Lejos, Enchanting, BricxCC, AIA, and AdaCore were cited only by one study each one. Besides, the study \cite{E23} did not mention which environment was used.  Table \ref{environments_used} summarizes the used environments in our SRL.
+
+\begin{table}[h]
+\renewcommand{\arraystretch}{1.3}
+\caption{The environments used in the selected studies}
+\label{environments_used}
+\centering
+\begin{tabular}{|c||p{3cm}||c|}
+\hline \textbf{Environments} &\textbf{Study} & \textbf{Frequency}\\
+\hline LabVIEW (NXT)	 & \cite{E03}, \cite{E04}, \cite{E09}, \cite{E11}, \cite{E15}, \cite{E20}, \cite{E21}, \cite{E24}, \cite{E25}, \cite{E26}, \cite{E27}, \cite{E28}, \cite{E30}, \cite{E31}, \cite{E32}, \cite{E33}, \cite{E34}, \cite{E35}, \cite{E36}    & 19\\
+\hline LabVIEW (EV3) & \cite{E01}, \cite{E05}, \cite{E06}, \cite{E07}, \cite{E08}, \cite{E12}, \cite{E16} & 7\\
+\hline LabVIEW (NXT / EV3) & \cite{E10}, \cite{E14} & 2\\
+\hline Eclipse & \cite{E13}, \cite{E19} & 2\\
+\hline Lejos & \cite{E22} & 1\\
+\hline Enchanting & \cite{E18} & 1\\
+\hline BricxCC & \cite{E02} & 1\\
+\hline AIA & \cite{E29} & 1\\
+\hline AdaCore & \cite{E17} & 1\\
+\hline Not specified & \cite{E23} & 1\\
+\hline
+\end{tabular}
+\end{table}
+
+Figure X presents the frequency of the programming language that have been used for teaching through LEGO Robotic. The most programming language used was block-language (total of thirty studies), out of which twenty-eight studies were related to LabVIEW NXT and/or EV3 (\cite{E01}, \cite{E03}, \cite{E04}, \cite{E05}, \cite{E06}, \cite{E07}, \cite{E08}, \cite{E09}, \cite{E10}, \cite{E11}, \cite{E12}, \cite{E14}, \cite{E15}, \cite{E16}, \cite{E20}, \cite{E21}, \cite{E24}, \cite{E25}, \cite{E26}, \cite{E27}, \cite{E28}, \cite{E30}, \cite{E31}, \cite{E32}, \cite{E33}, \cite{E34}, \cite{E35}, \cite{E36} ), while only one study was related to App Inventor plus (\cite{E29}), finally, one study was related to Scratch (\cite{E18}). ScriptC language was used in two studies (\cite{E13}, \cite{E19}), whereas NXC (\cite{E02}), JAVA (\cite{E22}), C\# (\cite{E02}), ADA (\cite{E17}) language were used in one study each one. 
 
 % An example of a floating figure using the graphicx package.
 % Note that \label must occur AFTER (or within) \caption.
@@ -558,16 +705,9 @@ The authors would like to thank...
 % <OR> manually copy in the resultant .bbl file
 % set second argument of \begin to the number of references
 % (used to reserve space for the reference number labels box)
-\begin{thebibliography}{1}
 
-\bibitem{IEEEhowto:kopka}
-H.~Kopka and P.~W. Daly, \emph{A Guide to \LaTeX}, 3rd~ed.\hskip 1em plus
-  0.5em minus 0.4em\relax Harlow, England: Addison-Wesley, 1999.
-
-\end{thebibliography}
-
-
-
+\bibliographystyle{abbrv}
+\bibliography{referencias}
 
 % that's all folks
 \end{document}
